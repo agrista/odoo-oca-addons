@@ -1,0 +1,99 @@
+name: Sync OCA allowlist
+
+on:
+  workflow_dispatch:
+    inputs:
+      update_pins:
+        description: "Re-resolve source SHAs from 18.0 branch tips"
+        type: boolean
+        default: true
+  schedule:
+    # Weekly Monday 06:15 UTC — optional pin refresh
+    - cron: "15 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-oca-allowlist
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          # Need a token that can push and open PRs; default GITHUB_TOKEN is fine
+          # for this repo. Sibling agrista/odoo-* reads use SYNC_GITHUB_TOKEN.
+          token: ${{ secrets.SYNC_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install sync dependencies
+        run: pip install -r requirements.txt
+
+      - name: Require readable sibling token when needed
+        env:
+          SYNC_GITHUB_TOKEN: ${{ secrets.SYNC_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # Public agrista/odoo-* forks work with anonymous HTTPS today.
+          # Private siblings need an org secret SYNC_GITHUB_TOKEN with repo:read
+          # on those forks. GITHUB_TOKEN alone cannot read other private repos.
+          TOKEN="${SYNC_GITHUB_TOKEN:-}"
+          if [[ -n "$TOKEN" ]]; then
+            code=$(curl -sS -o /dev/null -w "%{http_code}" \
+              -H "Authorization: Bearer $TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/agrista/odoo-queue")
+            if [[ "$code" != "200" ]]; then
+              echo "::error::SYNC_GITHUB_TOKEN cannot read agrista/odoo-queue (HTTP $code)."
+              echo "Configure an org/repo secret SYNC_GITHUB_TOKEN with read access to agrista/odoo-* forks."
+              exit 1
+            fi
+          else
+            code=$(curl -sS -o /dev/null -w "%{http_code}" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/agrista/odoo-queue")
+            if [[ "$code" != "200" ]]; then
+              echo "::error::Cannot read agrista/odoo-queue without SYNC_GITHUB_TOKEN (HTTP $code)."
+              echo "GITHUB_TOKEN cannot access private sibling repos. Add org secret SYNC_GITHUB_TOKEN"
+              echo "with contents:read on agrista/odoo-* source forks, then re-run."
+              exit 1
+            fi
+            echo "Sibling repos are readable anonymously; SYNC_GITHUB_TOKEN not required for this run."
+          fi
+
+      - name: Run sync
+        env:
+          SYNC_GITHUB_TOKEN: ${{ secrets.SYNC_GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          UPDATE_PINS_FLAG=""
+          if [[ "${{ github.event_name }}" == "schedule" ]] || [[ "${{ inputs.update_pins || 'true' }}" == "true" ]]; then
+            UPDATE_PINS_FLAG="--update-pins"
+          fi
+          python tools/sync.py --repo-root . $UPDATE_PINS_FLAG
+
+      - name: Open PR if tree changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.SYNC_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          commit-message: "chore(sync): refresh allowlisted OCA addons"
+          title: "chore(sync): refresh allowlisted OCA addons"
+          body: |
+            Automated sync from agrista/odoo-* forks at pins recorded in `sources.lock.json`.
+
+            - Do not edit addon trees in this PR by hand — change allowlist.yml or source forks, then re-sync.
+            - Missing allowlisted addons (if any) are listed under `missing` in `sources.lock.json`.
+          branch: chore/sync-oca-allowlist
+          base: "18.0"
+          delete-branch: true

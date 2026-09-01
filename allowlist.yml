@@ -1,0 +1,105 @@
+# Thin OCA allowlist for Odoo.sh.
+# Source of truth mirrored from agrista/corporator:
+#   tools/installed_modules.txt (OCA section) and tools/closure.out.json
+# Custom Agrista modules stay in agrista/odoo-agrista — never list them here.
+# Patch OCA code in agrista/odoo-* forks; this repo only materializes the allowlist.
+
+branch: "18.0"
+
+addons:
+  partner_statement:
+    repo: agrista/odoo-account-financial-reporting
+    path: partner_statement
+
+  brand:
+    repo: agrista/odoo-brand
+    path: brand
+  product_brand:
+    repo: agrista/odoo-brand
+    path: product_brand
+
+  document_knowledge:
+    repo: agrista/odoo-knowledge
+    path: document_knowledge
+  document_page:
+    repo: agrista/odoo-knowledge
+    path: document_page
+  document_page_procedure:
+    repo: agrista/odoo-knowledge
+    path: document_page_procedure
+  document_page_quality_manual:
+    repo: agrista/odoo-knowledge
+    path: document_page_quality_manual
+  document_page_work_instruction:
+    repo: agrista/odoo-knowledge
+    path: document_page_work_instruction
+
+  mgmtsystem:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem
+  mgmtsystem_action:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_action
+  mgmtsystem_audit:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_audit
+  mgmtsystem_nonconformity:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity
+  mgmtsystem_nonconformity_mrp:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity_mrp
+
+  res_company_code:
+    repo: agrista/odoo-multi-company
+    path: res_company_code
+  res_company_search_view:
+    repo: agrista/odoo-multi-company
+    path: res_company_search_view
+
+  partner_company_type:
+    repo: agrista/odoo-partner-contact
+    path: partner_company_type
+  partner_identification:
+    repo: agrista/odoo-partner-contact
+    path: partner_identification
+
+  purchase_request:
+    repo: agrista/odoo-purchase-workflow
+    path: purchase_request
+
+  queue_job:
+    repo: agrista/odoo-queue
+    path: queue_job
+  queue_job_cron_jobrunner:
+    repo: agrista/odoo-queue
+    path: queue_job_cron_jobrunner
+
+  report_xlsx:
+    repo: agrista/odoo-reporting-engine
+    path: report_xlsx
+  report_xlsx_helper:
+    repo: agrista/odoo-reporting-engine
+    path: report_xlsx_helper
+
+  base_revision:
+    repo: agrista/odoo-server-ux
+    path: base_revision
+  date_range:
+    repo: agrista/odoo-server-ux
+    path: date_range
+
+  stock_lot_traceability:
+    repo: agrista/odoo-stock-logistics-workflow
+    path: stock_lot_traceability
+
+  web_no_bubble:
+    repo: agrista/odoo-web
+    path: web_no_bubble
+  web_refresher:
+    repo: agrista/odoo-web
+    path: web_refresher
+
+  website_odoo_debranding:
+    repo: agrista/odoo-website
+    path: website_odoo_debranding
