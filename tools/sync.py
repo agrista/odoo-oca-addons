@@ -194,6 +194,12 @@ def sync_from_checkouts(
     return SyncResult(synced=synced, missing=missing, lockfile=lockfile)
 
 
+def lockfile_content_equal(a: dict[str, Any], b: dict[str, Any]) -> bool:
+    """Compare lockfile payload ignoring generated_at timestamp."""
+    keys = ("branch", "sources", "synced", "missing")
+    return all(a.get(k) == b.get(k) for k in keys)
+
+
 def _run(cmd: list[str], *, cwd: Path | None = None) -> str:
     result = subprocess.run(
         cmd,
@@ -331,6 +337,11 @@ def run_sync(
 
     remove_stale_synced_addons(repo_root, allowlist, previous.get("synced") or {})
     result = sync_from_checkouts(allowlist, checkouts, repo_root, pins)
+    if lockfile_content_equal(previous, result.lockfile):
+        # Preserve prior generated_at so same-pin re-runs leave git clean.
+        result.lockfile["generated_at"] = previous.get("generated_at")
+        if previous == result.lockfile:
+            return result
     save_lockfile(lock_path, result.lockfile)
     return result
 

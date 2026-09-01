@@ -235,3 +235,21 @@ def test_resync_same_pins_is_noop_for_lockfile_content(tmp_path: Path) -> None:
         second.lockfile["synced"], sort_keys=True
     )
     assert first.lockfile["sources"] == second.lockfile["sources"]
+
+
+def test_lockfile_content_equal_ignores_generated_at() -> None:
+    from sync import lockfile_content_equal
+
+    a = {
+        "branch": "18.0",
+        "generated_at": "2020-01-01T00:00:00Z",
+        "sources": {"agrista/odoo-queue": {"sha": "a", "addons": ["queue_job"]}},
+        "synced": {"queue_job": {"repo": "agrista/odoo-queue", "sha": "a", "path": "queue_job"}},
+        "missing": [],
+    }
+    b = dict(a)
+    b["generated_at"] = "2026-01-01T00:00:00Z"
+    assert lockfile_content_equal(a, b)
+    b = dict(a)
+    b["synced"] = {}
+    assert not lockfile_content_equal(a, b)
