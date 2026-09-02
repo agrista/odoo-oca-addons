@@ -1,4 +1,4 @@
-# oca-addons
+# odoo-oca-addons
 
 Thin **allowlist** of OCA addons for [Odoo.sh](https://www.odoo.sh), pulled by
 [`agrista/corporator`](https://github.com/agrista/corporator) as a **single**
@@ -118,19 +118,19 @@ Do this in **agrista/corporator** (separate PR; not done from this repo):
    ```gitconfig
    [submodule "src/oca"]
        path = src/oca
-       url = git@github.com:agrista/oca-addons.git
+       url = git@github.com:agrista/odoo-oca-addons.git
        branch = 18.0
    ```
 
 3. Point Odoo addons path / Odoo.sh config at `src/oca` (repo root of this
    bundle) instead of the many `src/<oca-project>` paths.
 4. On Odoo.sh, replace the many deploy keys / submodule credentials with **one**
-   deploy key (or deploy-key equivalent) for `agrista/oca-addons`.
+   deploy key (or deploy-key equivalent) for `agrista/odoo-oca-addons`.
 
 Suggested clone:
 
 ```bash
-git submodule add -b 18.0 git@github.com:agrista/oca-addons.git src/oca
+git submodule add -b 18.0 git@github.com:agrista/odoo-oca-addons.git src/oca
 ```
 
 ## Branching
