@@ -1,0 +1,243 @@
+{
+  "branch": "18.0",
+  "generated_at": "2026-09-01T16:41:09Z",
+  "missing": [
+    {
+      "addon": "document_page_procedure",
+      "path": "document_page_procedure",
+      "reason": "not found at pin",
+      "repo": "agrista/odoo-knowledge"
+    },
+    {
+      "addon": "document_page_quality_manual",
+      "path": "document_page_quality_manual",
+      "reason": "not found at pin",
+      "repo": "agrista/odoo-knowledge"
+    },
+    {
+      "addon": "document_page_work_instruction",
+      "path": "document_page_work_instruction",
+      "reason": "not found at pin",
+      "repo": "agrista/odoo-knowledge"
+    }
+  ],
+  "sources": {
+    "agrista/odoo-account-financial-reporting": {
+      "addons": [
+        "partner_statement"
+      ],
+      "sha": "3bc6fd6b9bdae32afada64770ee5a42667618538"
+    },
+    "agrista/odoo-brand": {
+      "addons": [
+        "brand",
+        "product_brand"
+      ],
+      "sha": "45d8f8a78911d5b05061fdbee154073f41f2862a"
+    },
+    "agrista/odoo-knowledge": {
+      "addons": [
+        "document_knowledge",
+        "document_page"
+      ],
+      "sha": "e28645bc4361d59af8a63023393216fa0c68ea11"
+    },
+    "agrista/odoo-management-system": {
+      "addons": [
+        "mgmtsystem",
+        "mgmtsystem_action",
+        "mgmtsystem_audit",
+        "mgmtsystem_nonconformity",
+        "mgmtsystem_nonconformity_mrp"
+      ],
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "agrista/odoo-multi-company": {
+      "addons": [
+        "res_company_code",
+        "res_company_search_view"
+      ],
+      "sha": "58351da0473d98ca6817d4692255e384f5d043e6"
+    },
+    "agrista/odoo-partner-contact": {
+      "addons": [
+        "partner_company_type",
+        "partner_identification"
+      ],
+      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+    },
+    "agrista/odoo-purchase-workflow": {
+      "addons": [
+        "purchase_request"
+      ],
+      "sha": "f1b9bc3e7260fa6dda763fedae2166c6ca6ccc5c"
+    },
+    "agrista/odoo-queue": {
+      "addons": [
+        "queue_job",
+        "queue_job_cron_jobrunner"
+      ],
+      "sha": "71220eabb70b8eda9b7d8051c80032899a47ddd2"
+    },
+    "agrista/odoo-reporting-engine": {
+      "addons": [
+        "report_xlsx",
+        "report_xlsx_helper"
+      ],
+      "sha": "7f1f62ae9f88dc67aefd805c382d568631662d47"
+    },
+    "agrista/odoo-server-ux": {
+      "addons": [
+        "base_revision",
+        "date_range"
+      ],
+      "sha": "507aef546d244c56bb60a58f6acfc7f2e811a220"
+    },
+    "agrista/odoo-stock-logistics-workflow": {
+      "addons": [
+        "stock_lot_traceability"
+      ],
+      "sha": "2e67288bcc22663037b6e63bc29bf9a8f27955bc"
+    },
+    "agrista/odoo-web": {
+      "addons": [
+        "web_no_bubble",
+        "web_refresher"
+      ],
+      "sha": "a16ca818782920246e1825f686190798af331cf6"
+    },
+    "agrista/odoo-website": {
+      "addons": [
+        "website_odoo_debranding"
+      ],
+      "sha": "0d20ec48b714e78b10dd272c09619d498035fdc1"
+    }
+  },
+  "synced": {
+    "base_revision": {
+      "path": "base_revision",
+      "repo": "agrista/odoo-server-ux",
+      "sha": "507aef546d244c56bb60a58f6acfc7f2e811a220"
+    },
+    "brand": {
+      "path": "brand",
+      "repo": "agrista/odoo-brand",
+      "sha": "45d8f8a78911d5b05061fdbee154073f41f2862a"
+    },
+    "date_range": {
+      "path": "date_range",
+      "repo": "agrista/odoo-server-ux",
+      "sha": "507aef546d244c56bb60a58f6acfc7f2e811a220"
+    },
+    "document_knowledge": {
+      "path": "document_knowledge",
+      "repo": "agrista/odoo-knowledge",
+      "sha": "e28645bc4361d59af8a63023393216fa0c68ea11"
+    },
+    "document_page": {
+      "path": "document_page",
+      "repo": "agrista/odoo-knowledge",
+      "sha": "e28645bc4361d59af8a63023393216fa0c68ea11"
+    },
+    "mgmtsystem": {
+      "path": "mgmtsystem",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "mgmtsystem_action": {
+      "path": "mgmtsystem_action",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "mgmtsystem_audit": {
+      "path": "mgmtsystem_audit",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "mgmtsystem_nonconformity": {
+      "path": "mgmtsystem_nonconformity",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "mgmtsystem_nonconformity_mrp": {
+      "path": "mgmtsystem_nonconformity_mrp",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "partner_company_type": {
+      "path": "partner_company_type",
+      "repo": "agrista/odoo-partner-contact",
+      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+    },
+    "partner_identification": {
+      "path": "partner_identification",
+      "repo": "agrista/odoo-partner-contact",
+      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+    },
+    "partner_statement": {
+      "path": "partner_statement",
+      "repo": "agrista/odoo-account-financial-reporting",
+      "sha": "3bc6fd6b9bdae32afada64770ee5a42667618538"
+    },
+    "product_brand": {
+      "path": "product_brand",
+      "repo": "agrista/odoo-brand",
+      "sha": "45d8f8a78911d5b05061fdbee154073f41f2862a"
+    },
+    "purchase_request": {
+      "path": "purchase_request",
+      "repo": "agrista/odoo-purchase-workflow",
+      "sha": "f1b9bc3e7260fa6dda763fedae2166c6ca6ccc5c"
+    },
+    "queue_job": {
+      "path": "queue_job",
+      "repo": "agrista/odoo-queue",
+      "sha": "71220eabb70b8eda9b7d8051c80032899a47ddd2"
+    },
+    "queue_job_cron_jobrunner": {
+      "path": "queue_job_cron_jobrunner",
+      "repo": "agrista/odoo-queue",
+      "sha": "71220eabb70b8eda9b7d8051c80032899a47ddd2"
+    },
+    "report_xlsx": {
+      "path": "report_xlsx",
+      "repo": "agrista/odoo-reporting-engine",
+      "sha": "7f1f62ae9f88dc67aefd805c382d568631662d47"
+    },
+    "report_xlsx_helper": {
+      "path": "report_xlsx_helper",
+      "repo": "agrista/odoo-reporting-engine",
+      "sha": "7f1f62ae9f88dc67aefd805c382d568631662d47"
+    },
+    "res_company_code": {
+      "path": "res_company_code",
+      "repo": "agrista/odoo-multi-company",
+      "sha": "58351da0473d98ca6817d4692255e384f5d043e6"
+    },
+    "res_company_search_view": {
+      "path": "res_company_search_view",
+      "repo": "agrista/odoo-multi-company",
+      "sha": "58351da0473d98ca6817d4692255e384f5d043e6"
+    },
+    "stock_lot_traceability": {
+      "path": "stock_lot_traceability",
+      "repo": "agrista/odoo-stock-logistics-workflow",
+      "sha": "2e67288bcc22663037b6e63bc29bf9a8f27955bc"
+    },
+    "web_no_bubble": {
+      "path": "web_no_bubble",
+      "repo": "agrista/odoo-web",
+      "sha": "a16ca818782920246e1825f686190798af331cf6"
+    },
+    "web_refresher": {
+      "path": "web_refresher",
+      "repo": "agrista/odoo-web",
+      "sha": "a16ca818782920246e1825f686190798af331cf6"
+    },
+    "website_odoo_debranding": {
+      "path": "website_odoo_debranding",
+      "repo": "agrista/odoo-website",
+      "sha": "0d20ec48b714e78b10dd272c09619d498035fdc1"
+    }
+  }
+}
