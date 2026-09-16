@@ -24,16 +24,16 @@ addons:
   document_page:
     repo: agrista/odoo-knowledge
     path: document_page
+
   document_page_procedure:
-    repo: agrista/odoo-knowledge
+    repo: agrista/odoo-management-system
     path: document_page_procedure
   document_page_quality_manual:
-    repo: agrista/odoo-knowledge
+    repo: agrista/odoo-management-system
     path: document_page_quality_manual
   document_page_work_instruction:
-    repo: agrista/odoo-knowledge
+    repo: agrista/odoo-management-system
     path: document_page_work_instruction
-
   mgmtsystem:
     repo: agrista/odoo-management-system
     path: mgmtsystem
@@ -43,6 +43,9 @@ addons:
   mgmtsystem_audit:
     repo: agrista/odoo-management-system
     path: mgmtsystem_audit
+  mgmtsystem_manual:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_manual
   mgmtsystem_nonconformity:
     repo: agrista/odoo-management-system
     path: mgmtsystem_nonconformity

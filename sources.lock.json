@@ -1,26 +1,7 @@
 {
   "branch": "18.0",
-  "generated_at": "2026-09-01T16:41:09Z",
-  "missing": [
-    {
-      "addon": "document_page_procedure",
-      "path": "document_page_procedure",
-      "reason": "not found at pin",
-      "repo": "agrista/odoo-knowledge"
-    },
-    {
-      "addon": "document_page_quality_manual",
-      "path": "document_page_quality_manual",
-      "reason": "not found at pin",
-      "repo": "agrista/odoo-knowledge"
-    },
-    {
-      "addon": "document_page_work_instruction",
-      "path": "document_page_work_instruction",
-      "reason": "not found at pin",
-      "repo": "agrista/odoo-knowledge"
-    }
-  ],
+  "generated_at": "2026-09-16T09:51:07Z",
+  "missing": [],
   "sources": {
     "agrista/odoo-account-financial-reporting": {
       "addons": [
@@ -44,9 +25,13 @@
     },
     "agrista/odoo-management-system": {
       "addons": [
+        "document_page_procedure",
+        "document_page_quality_manual",
+        "document_page_work_instruction",
         "mgmtsystem",
         "mgmtsystem_action",
         "mgmtsystem_audit",
+        "mgmtsystem_manual",
         "mgmtsystem_nonconformity",
         "mgmtsystem_nonconformity_mrp"
       ],
@@ -139,6 +124,21 @@
       "repo": "agrista/odoo-knowledge",
       "sha": "e28645bc4361d59af8a63023393216fa0c68ea11"
     },
+    "document_page_procedure": {
+      "path": "document_page_procedure",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "document_page_quality_manual": {
+      "path": "document_page_quality_manual",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "document_page_work_instruction": {
+      "path": "document_page_work_instruction",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
     "mgmtsystem": {
       "path": "mgmtsystem",
       "repo": "agrista/odoo-management-system",
@@ -151,6 +151,11 @@
     },
     "mgmtsystem_audit": {
       "path": "mgmtsystem_audit",
+      "repo": "agrista/odoo-management-system",
+      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+    },
+    "mgmtsystem_manual": {
+      "path": "mgmtsystem_manual",
       "repo": "agrista/odoo-management-system",
       "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
     },
