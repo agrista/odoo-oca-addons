@@ -25,6 +25,15 @@ addons:
     repo: agrista/odoo-knowledge
     path: document_page
 
+  document_page_environment_manual:
+    repo: agrista/odoo-management-system
+    path: document_page_environment_manual
+  document_page_environmental_aspect:
+    repo: agrista/odoo-management-system
+    path: document_page_environmental_aspect
+  document_page_health_safety_manual:
+    repo: agrista/odoo-management-system
+    path: document_page_health_safety_manual
   document_page_procedure:
     repo: agrista/odoo-management-system
     path: document_page_procedure
@@ -40,18 +49,75 @@ addons:
   mgmtsystem_action:
     repo: agrista/odoo-management-system
     path: mgmtsystem_action
+  mgmtsystem_action_efficacy:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_action_efficacy
+  mgmtsystem_action_template:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_action_template
   mgmtsystem_audit:
     repo: agrista/odoo-management-system
     path: mgmtsystem_audit
+  mgmtsystem_claim:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_claim
+  mgmtsystem_hazard:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_hazard
+  mgmtsystem_hazard_risk:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_hazard_risk
+  mgmtsystem_info_security_manual:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_info_security_manual
   mgmtsystem_manual:
     repo: agrista/odoo-management-system
     path: mgmtsystem_manual
   mgmtsystem_nonconformity:
     repo: agrista/odoo-management-system
     path: mgmtsystem_nonconformity
+  mgmtsystem_nonconformity_hazard:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity_hazard
+  mgmtsystem_nonconformity_hr:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity_hr
+  mgmtsystem_nonconformity_maintenance_equipment:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity_maintenance_equipment
   mgmtsystem_nonconformity_mrp:
     repo: agrista/odoo-management-system
     path: mgmtsystem_nonconformity_mrp
+  mgmtsystem_nonconformity_product:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity_product
+  mgmtsystem_nonconformity_repair:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity_repair
+  mgmtsystem_nonconformity_type:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_nonconformity_type
+  mgmtsystem_objective:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_objective
+  mgmtsystem_partner:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_partner
+  mgmtsystem_quality:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_quality
+  mgmtsystem_review:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_review
+  mgmtsystem_review_objective:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_review_objective
+  mgmtsystem_review_survey:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_review_survey
+  mgmtsystem_survey:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_survey
 
   res_company_code:
     repo: agrista/odoo-multi-company
