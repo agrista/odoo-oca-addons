@@ -25,6 +25,10 @@ addons:
     repo: agrista/odoo-knowledge
     path: document_page
 
+  crm_claim:
+    repo: agrista/odoo-crm
+    path: crm_claim
+
   document_page_environment_manual:
     repo: agrista/odoo-management-system
     path: document_page_environment_manual
@@ -34,6 +38,9 @@ addons:
   document_page_health_safety_manual:
     repo: agrista/odoo-management-system
     path: document_page_health_safety_manual
+  document_page_mgmtsystem:
+    repo: agrista/odoo-management-system
+    path: document_page_mgmtsystem
   document_page_procedure:
     repo: agrista/odoo-management-system
     path: document_page_procedure
@@ -61,12 +68,18 @@ addons:
   mgmtsystem_claim:
     repo: agrista/odoo-management-system
     path: mgmtsystem_claim
+  mgmtsystem_environment:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_environment
   mgmtsystem_hazard:
     repo: agrista/odoo-management-system
     path: mgmtsystem_hazard
   mgmtsystem_hazard_risk:
     repo: agrista/odoo-management-system
     path: mgmtsystem_hazard_risk
+  mgmtsystem_health_safety:
+    repo: agrista/odoo-management-system
+    path: mgmtsystem_health_safety
   mgmtsystem_info_security_manual:
     repo: agrista/odoo-management-system
     path: mgmtsystem_info_security_manual
