@@ -63,6 +63,9 @@ addons:
   partner_identification:
     repo: agrista/odoo-partner-contact
     path: partner_identification
+  base_partner_company_group:
+    repo: agrista/odoo-partner-contact
+    path: base_partner_company_group
 
   purchase_request:
     repo: agrista/odoo-purchase-workflow

@@ -61,6 +61,7 @@
     },
     "agrista/odoo-partner-contact": {
       "addons": [
+        "base_partner_company_group",
         "partner_company_type",
         "partner_identification"
       ],
@@ -114,6 +115,11 @@
     }
   },
   "synced": {
+    "base_partner_company_group": {
+      "path": "base_partner_company_group",
+      "repo": "agrista/odoo-partner-contact",
+      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+    },
     "base_revision": {
       "path": "base_revision",
       "repo": "agrista/odoo-server-ux",
