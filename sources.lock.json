@@ -1,26 +1,7 @@
 {
   "branch": "18.0",
-  "generated_at": "2026-09-01T16:41:09Z",
-  "missing": [
-    {
-      "addon": "document_page_procedure",
-      "path": "document_page_procedure",
-      "reason": "not found at pin",
-      "repo": "agrista/odoo-knowledge"
-    },
-    {
-      "addon": "document_page_quality_manual",
-      "path": "document_page_quality_manual",
-      "reason": "not found at pin",
-      "repo": "agrista/odoo-knowledge"
-    },
-    {
-      "addon": "document_page_work_instruction",
-      "path": "document_page_work_instruction",
-      "reason": "not found at pin",
-      "repo": "agrista/odoo-knowledge"
-    }
-  ],
+  "generated_at": "2026-09-16T11:43:56Z",
+  "missing": [],
   "sources": {
     "agrista/odoo-account-financial-reporting": {
       "addons": [
@@ -35,6 +16,12 @@
       ],
       "sha": "45d8f8a78911d5b05061fdbee154073f41f2862a"
     },
+    "agrista/odoo-crm": {
+      "addons": [
+        "crm_claim"
+      ],
+      "sha": "e3368a1afd7723c7f32a429524698451fa7f3eba"
+    },
     "agrista/odoo-knowledge": {
       "addons": [
         "document_knowledge",
@@ -44,13 +31,42 @@
     },
     "agrista/odoo-management-system": {
       "addons": [
+        "document_page_environment_manual",
+        "document_page_environmental_aspect",
+        "document_page_health_safety_manual",
+        "document_page_mgmtsystem",
+        "document_page_procedure",
+        "document_page_quality_manual",
+        "document_page_work_instruction",
         "mgmtsystem",
         "mgmtsystem_action",
+        "mgmtsystem_action_efficacy",
+        "mgmtsystem_action_template",
         "mgmtsystem_audit",
+        "mgmtsystem_claim",
+        "mgmtsystem_environment",
+        "mgmtsystem_hazard",
+        "mgmtsystem_hazard_risk",
+        "mgmtsystem_health_safety",
+        "mgmtsystem_info_security_manual",
+        "mgmtsystem_manual",
         "mgmtsystem_nonconformity",
-        "mgmtsystem_nonconformity_mrp"
+        "mgmtsystem_nonconformity_hazard",
+        "mgmtsystem_nonconformity_hr",
+        "mgmtsystem_nonconformity_maintenance_equipment",
+        "mgmtsystem_nonconformity_mrp",
+        "mgmtsystem_nonconformity_product",
+        "mgmtsystem_nonconformity_repair",
+        "mgmtsystem_nonconformity_type",
+        "mgmtsystem_objective",
+        "mgmtsystem_partner",
+        "mgmtsystem_quality",
+        "mgmtsystem_review",
+        "mgmtsystem_review_objective",
+        "mgmtsystem_review_survey",
+        "mgmtsystem_survey"
       ],
-      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
     },
     "agrista/odoo-multi-company": {
       "addons": [
@@ -124,6 +140,11 @@
       "repo": "agrista/odoo-brand",
       "sha": "45d8f8a78911d5b05061fdbee154073f41f2862a"
     },
+    "crm_claim": {
+      "path": "crm_claim",
+      "repo": "agrista/odoo-crm",
+      "sha": "e3368a1afd7723c7f32a429524698451fa7f3eba"
+    },
     "date_range": {
       "path": "date_range",
       "repo": "agrista/odoo-server-ux",
@@ -139,30 +160,175 @@
       "repo": "agrista/odoo-knowledge",
       "sha": "e28645bc4361d59af8a63023393216fa0c68ea11"
     },
+    "document_page_environment_manual": {
+      "path": "document_page_environment_manual",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "document_page_environmental_aspect": {
+      "path": "document_page_environmental_aspect",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "document_page_health_safety_manual": {
+      "path": "document_page_health_safety_manual",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "document_page_mgmtsystem": {
+      "path": "document_page_mgmtsystem",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "document_page_procedure": {
+      "path": "document_page_procedure",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "document_page_quality_manual": {
+      "path": "document_page_quality_manual",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "document_page_work_instruction": {
+      "path": "document_page_work_instruction",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
     "mgmtsystem": {
       "path": "mgmtsystem",
       "repo": "agrista/odoo-management-system",
-      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
     },
     "mgmtsystem_action": {
       "path": "mgmtsystem_action",
       "repo": "agrista/odoo-management-system",
-      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_action_efficacy": {
+      "path": "mgmtsystem_action_efficacy",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_action_template": {
+      "path": "mgmtsystem_action_template",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
     },
     "mgmtsystem_audit": {
       "path": "mgmtsystem_audit",
       "repo": "agrista/odoo-management-system",
-      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_claim": {
+      "path": "mgmtsystem_claim",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_environment": {
+      "path": "mgmtsystem_environment",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_hazard": {
+      "path": "mgmtsystem_hazard",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_hazard_risk": {
+      "path": "mgmtsystem_hazard_risk",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_health_safety": {
+      "path": "mgmtsystem_health_safety",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_info_security_manual": {
+      "path": "mgmtsystem_info_security_manual",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_manual": {
+      "path": "mgmtsystem_manual",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
     },
     "mgmtsystem_nonconformity": {
       "path": "mgmtsystem_nonconformity",
       "repo": "agrista/odoo-management-system",
-      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_nonconformity_hazard": {
+      "path": "mgmtsystem_nonconformity_hazard",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_nonconformity_hr": {
+      "path": "mgmtsystem_nonconformity_hr",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_nonconformity_maintenance_equipment": {
+      "path": "mgmtsystem_nonconformity_maintenance_equipment",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
     },
     "mgmtsystem_nonconformity_mrp": {
       "path": "mgmtsystem_nonconformity_mrp",
       "repo": "agrista/odoo-management-system",
-      "sha": "4aa4c7b19d4bbad214d5eec0f342667b445a1fd8"
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_nonconformity_product": {
+      "path": "mgmtsystem_nonconformity_product",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_nonconformity_repair": {
+      "path": "mgmtsystem_nonconformity_repair",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_nonconformity_type": {
+      "path": "mgmtsystem_nonconformity_type",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_objective": {
+      "path": "mgmtsystem_objective",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_partner": {
+      "path": "mgmtsystem_partner",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_quality": {
+      "path": "mgmtsystem_quality",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_review": {
+      "path": "mgmtsystem_review",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_review_objective": {
+      "path": "mgmtsystem_review_objective",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_review_survey": {
+      "path": "mgmtsystem_review_survey",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
+    },
+    "mgmtsystem_survey": {
+      "path": "mgmtsystem_survey",
+      "repo": "agrista/odoo-management-system",
+      "sha": "8562d78815a3460d017d92303787ed44144d5f72"
     },
     "partner_company_type": {
       "path": "partner_company_type",
