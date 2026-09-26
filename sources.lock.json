@@ -1,6 +1,6 @@
 {
   "branch": "19.0",
-  "generated_at": "2026-09-16T11:43:56Z",
+  "generated_at": "2026-09-26T20:03:17Z",
   "missing": [],
   "sources": {
     "agrista/odoo-account-financial-reporting": {
@@ -81,7 +81,7 @@
         "partner_company_type",
         "partner_identification"
       ],
-      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+      "sha": "eecd1dc40d5567eb1ee4262bbed26875805bacbc"
     },
     "agrista/odoo-purchase-workflow": {
       "addons": [
@@ -121,20 +121,20 @@
         "web_no_bubble",
         "web_refresher"
       ],
-      "sha": "a16ca818782920246e1825f686190798af331cf6"
+      "sha": "ce4e8caf090430be316377f7bd873afd13070dda"
     },
     "agrista/odoo-website": {
       "addons": [
         "website_odoo_debranding"
       ],
-      "sha": "0d20ec48b714e78b10dd272c09619d498035fdc1"
+      "sha": "1d07742da30b131c38ab8160f804ea205ef741a3"
     }
   },
   "synced": {
     "base_partner_company_group": {
       "path": "base_partner_company_group",
       "repo": "agrista/odoo-partner-contact",
-      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+      "sha": "eecd1dc40d5567eb1ee4262bbed26875805bacbc"
     },
     "base_revision": {
       "path": "base_revision",
@@ -339,12 +339,12 @@
     "partner_company_type": {
       "path": "partner_company_type",
       "repo": "agrista/odoo-partner-contact",
-      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+      "sha": "eecd1dc40d5567eb1ee4262bbed26875805bacbc"
     },
     "partner_identification": {
       "path": "partner_identification",
       "repo": "agrista/odoo-partner-contact",
-      "sha": "49c95dbcf05ba8f36226c9c1bc518934ccfa3221"
+      "sha": "eecd1dc40d5567eb1ee4262bbed26875805bacbc"
     },
     "partner_statement": {
       "path": "partner_statement",
@@ -399,17 +399,17 @@
     "web_no_bubble": {
       "path": "web_no_bubble",
       "repo": "agrista/odoo-web",
-      "sha": "a16ca818782920246e1825f686190798af331cf6"
+      "sha": "ce4e8caf090430be316377f7bd873afd13070dda"
     },
     "web_refresher": {
       "path": "web_refresher",
       "repo": "agrista/odoo-web",
-      "sha": "a16ca818782920246e1825f686190798af331cf6"
+      "sha": "ce4e8caf090430be316377f7bd873afd13070dda"
     },
     "website_odoo_debranding": {
       "path": "website_odoo_debranding",
       "repo": "agrista/odoo-website",
-      "sha": "0d20ec48b714e78b10dd272c09619d498035fdc1"
+      "sha": "1d07742da30b131c38ab8160f804ea205ef741a3"
     }
   }
 }

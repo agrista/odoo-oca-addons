@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-21 01:49+0000\n"
-"PO-Revision-Date: 2026-05-14 20:35+0000\n"
-"Last-Translator: Ben Brich <b.brich@humanilog.org>\n"
+"PO-Revision-Date: 2026-06-22 21:46+0000\n"
+"Last-Translator: intero-chd <c.dominiak@intero-technologies.de>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. module: partner_company_type
 #: model:res.partner.company.type,shortcut:partner_company_type.res_partner_company_type_sa
 msgid "AC"
-msgstr ""
+msgstr "AG"
 
 #. module: partner_company_type
 #: model:ir.model.fields,field_description:partner_company_type.field_res_partner_company_type__shortcut
@@ -32,14 +32,14 @@ msgstr "Abkürzung"
 #. module: partner_company_type
 #: model:res.partner.company.type,name:partner_company_type.res_partner_company_type_sa
 msgid "Anonymous Company"
-msgstr "Anonyme Organisation"
+msgstr "Unbekanntes Unternehmen"
 
 #. module: partner_company_type
 #: model:ir.actions.act_window,name:partner_company_type.res_partner_company_type_act_window
 #: model:ir.ui.menu,name:partner_company_type.menu_partner_company_type
 #: model_terms:ir.ui.view,arch_db:partner_company_type.res_partner_company_type_form_view
 msgid "Company Types"
-msgstr "Organisation Typen"
+msgstr "Unternehmensart"
 
 #. module: partner_company_type
 #: model:ir.model,name:partner_company_type.model_res_partner
@@ -49,12 +49,12 @@ msgstr "Kontakt"
 #. module: partner_company_type
 #: model:ir.model.fields,field_description:partner_company_type.field_res_partner_company_type__create_uid
 msgid "Created by"
-msgstr "Erstellt von"
+msgstr "erstellt von"
 
 #. module: partner_company_type
 #: model:ir.model.fields,field_description:partner_company_type.field_res_partner_company_type__create_date
 msgid "Created on"
-msgstr "Erstellt am"
+msgstr "erstellt am"
 
 #. module: partner_company_type
 #: model:ir.model.fields,field_description:partner_company_type.field_res_partner_company_type__display_name
@@ -85,17 +85,17 @@ msgstr "Rechtsform"
 #. module: partner_company_type
 #: model:ir.model,name:partner_company_type.model_res_partner_company_type
 msgid "Partner Company Type"
-msgstr "Partner Organisation Typ"
+msgstr "Art des Partnerunternehmens"
 
 #. module: partner_company_type
 #: model:ir.model.constraint,message:partner_company_type.constraint_res_partner_company_type_name_uniq
 msgid "Partner Company Type already exists!"
-msgstr "Partner Organisations-Typ existiert bereits!"
+msgstr "Die Art des Partnerunternehmens existiert bereits!"
 
 #. module: partner_company_type
 #: model:ir.model.fields,field_description:partner_company_type.field_res_partner_company_type__name
 msgid "Title"
-msgstr "Titel"
+msgstr "Anrede"
 
 #~ msgid "Last Modified on"
 #~ msgstr "Zuletzt geändert am"
