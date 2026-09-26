@@ -33,7 +33,7 @@ def _write_addon(root: Path, name: str, body: str = "# addon\n") -> Path:
 
 def _write_allowlist(path: Path, addons: dict) -> None:
     path.write_text(
-        yaml.safe_dump({"branch": "18.0", "addons": addons}, sort_keys=False),
+        yaml.safe_dump({"branch": "19.0", "addons": addons}, sort_keys=False),
         encoding="utf-8",
     )
 
@@ -53,7 +53,7 @@ def test_load_allowlist_maps_addon_to_repo_and_path(tmp_path: Path) -> None:
 
     allowlist = load_allowlist(allowlist_path)
 
-    assert allowlist.branch == "18.0"
+    assert allowlist.branch == "19.0"
     assert allowlist.addons["queue_job"].repo == "agrista/odoo-queue"
     assert allowlist.addons["queue_job"].path == "queue_job"
     assert set(allowlist.addons) == {"queue_job", "brand"}
@@ -138,7 +138,7 @@ def test_lockfile_records_source_repo_and_sha(tmp_path: Path) -> None:
     save_lockfile(lock_path, result.lockfile)
     loaded = load_lockfile(lock_path)
 
-    assert loaded["branch"] == "18.0"
+    assert loaded["branch"] == "19.0"
     assert loaded["sources"]["agrista/odoo-brand"]["sha"] == "pinsha1"
     assert loaded["synced"]["brand"]["repo"] == "agrista/odoo-brand"
     assert loaded["synced"]["brand"]["sha"] == "pinsha1"
@@ -241,7 +241,7 @@ def test_lockfile_content_equal_ignores_generated_at() -> None:
     from sync import lockfile_content_equal
 
     a = {
-        "branch": "18.0",
+        "branch": "19.0",
         "generated_at": "2020-01-01T00:00:00Z",
         "sources": {"agrista/odoo-queue": {"sha": "a", "addons": ["queue_job"]}},
         "synced": {"queue_job": {"repo": "agrista/odoo-queue", "sha": "a", "path": "queue_job"}},

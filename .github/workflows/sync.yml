@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       update_pins:
-        description: "Re-resolve source SHAs from 18.0 branch tips"
+        description: "Re-resolve source SHAs from 19.0 branch tips"
         type: boolean
         default: true
   schedule:
@@ -95,5 +95,5 @@ jobs:
             - Do not edit addon trees in this PR by hand — change allowlist.yml or source forks, then re-sync.
             - Missing allowlisted addons (if any) are listed under `missing` in `sources.lock.json`.
           branch: chore/sync-oca-allowlist
-          base: "18.0"
+          base: "19.0"
           delete-branch: true

@@ -1,10 +1,12 @@
-# Thin OCA allowlist for Odoo.sh.
-# Source of truth mirrored from agrista/corporator:
-#   tools/installed_modules.txt (OCA section) and tools/closure.out.json
+# Platform-wide published OCA catalog for Agrista Odoo.sh umbrellas
+# (corporator, capewools, agrifinance, and future apps). Any umbrella may
+# consume a subset. Adding a module is a product/platform decision — needed by
+# ≥1 product or shared infra — not driven by a single app's installed_modules.
+# Historical seed: corporator installed_modules / closure (not ongoing ownership).
 # Custom Agrista modules stay in agrista/odoo-agrista — never list them here.
 # Patch OCA code in agrista/odoo-* forks; this repo only materializes the allowlist.
 
-branch: "18.0"
+branch: "19.0"
 
 addons:
   partner_statement:
