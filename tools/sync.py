@@ -70,13 +70,13 @@ def load_allowlist(path: Path) -> Allowlist:
         if not isinstance(entry, dict) or "repo" not in entry or "path" not in entry:
             raise AllowlistError(f"invalid allowlist entry for {name!r}")
         addons[name] = AddonSource(repo=str(entry["repo"]), path=str(entry["path"]))
-    return Allowlist(branch=str(data.get("branch") or "18.0"), addons=addons)
+    return Allowlist(branch=str(data.get("branch") or "19.0"), addons=addons)
 
 
 def load_lockfile(path: Path) -> dict[str, Any]:
     if not path.is_file():
         return {
-            "branch": "18.0",
+            "branch": "19.0",
             "generated_at": None,
             "sources": {},
             "synced": {},
