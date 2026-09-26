@@ -1,47 +1,42 @@
 # Copyright 2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo_test_helper import FakeModelLoader
-
 from odoo.exceptions import ValidationError
+from odoo.orm.model_classes import add_to_registry
 from odoo.tests import common
 
 
 class TestResPartner(common.TransactionCase):
-    def setUp(self):
-        super().setUp()
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
 
-        self.loader = FakeModelLoader(self.env, self.__module__)
-        self.loader.backup_registry()
         from .fake_models import ResPartner
 
-        self.loader.update_registry((ResPartner,))
+        add_to_registry(cls.registry, ResPartner)
+        cls.registry._setup_models__(cls.env.cr, ["res.partner"])
 
-        bad_cat = self.env["res.partner.id_category"].create(
+        bad_cat = cls.env["res.partner.id_category"].create(
             {"code": "another_code", "name": "another_name"}
         )
-        self.env["res.partner.id_number"].create(
+        cls.env["res.partner.id_number"].create(
             {
                 "name": "Bad ID",
                 "category_id": bad_cat.id,
-                "partner_id": self.env.user.partner_id.id,
+                "partner_id": cls.env.user.partner_id.id,
             }
         )
-        self.partner_id_category = self.env["res.partner.id_category"].create(
+        cls.partner_id_category = cls.env["res.partner.id_category"].create(
             {"code": "id_code", "name": "id_name"}
         )
-        self.partner = self.env.ref("base.main_partner")
-        self.partner_id = self.env["res.partner.id_number"].create(
+        cls.partner = cls.env.ref("base.main_partner")
+        cls.partner_id = cls.env["res.partner.id_number"].create(
             {
                 "name": "Good ID",
-                "category_id": self.partner_id_category.id,
-                "partner_id": self.partner.id,
+                "category_id": cls.partner_id_category.id,
+                "partner_id": cls.partner.id,
             }
         )
-
-    def tearDown(self):
-        self.loader.restore_registry()
-        return super().tearDown()
 
     def test_compute_identification(self):
         """It should set the proper field to the proper ID name."""

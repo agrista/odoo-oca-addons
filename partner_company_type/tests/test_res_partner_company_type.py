@@ -4,15 +4,19 @@
 from psycopg2 import IntegrityError
 
 from odoo import tools
-from odoo.tests.common import TransactionCase
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestResPartnerCompanyType(TransactionCase):
+class TestResPartnerCompanyType(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.company_type = cls.env.ref(
-            "partner_company_type.res_partner_company_type_sa"
+        cls.company_type = cls.env["res.partner.company.type"].create(
+            {
+                "name": "Test Anonymous Company",
+                "shortcut": "AC",
+            }
         )
 
     def test_00_duplicate(self):
